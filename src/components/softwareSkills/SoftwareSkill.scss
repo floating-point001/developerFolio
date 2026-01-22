@@ -22,10 +22,31 @@
 .software-skill-inline > i:hover {
   color: $skillsColor;
 }
+
+.software-skill-inline > .custom-skill-icon {
+  width: 1em;
+  height: 1em;
+  max-width: 3rem;
+  max-height: 3rem;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 3rem;
+  filter: grayscale(100%) opacity(0.7);
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.software-skill-inline:hover > .custom-skill-icon {
+  filter: grayscale(0%) opacity(1);
+}
+
 .software-skill-inline > p {
   color: $subTitle;
   font-size: 10px;
 }
 .software-skill-inline > i:hover ~ p {
+  color: $skillsColor;
+}
+.software-skill-inline:hover > .custom-skill-icon ~ p {
   color: $skillsColor;
 }
